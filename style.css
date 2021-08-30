@@ -1,0 +1,53 @@
+
+
+.logo-wrap, svg, .border, .letter {
+  transition: all 666ms ease-in-out;
+}
+
+.container {
+
+  height: 16em;
+  width: 16em;
+  margin: auto ;
+
+}
+
+.logo:hover {
+  animation: 0.5s linear infinite alternate;
+    animation-name: rotate-0;
+    animation-delay: 0s;
+    transform-origin: 50% 50%;
+    transform: scale(1), rotate(0deg) ;
+}
+svg path{
+  positon:absolute;
+  fill:none;
+  stroke-width:2;
+  top:0;
+  left:0;
+  /*mix-blend-mode: multiply;*/
+  transform-origin: 50% 50%;
+  transform: rotate(0deg) ;
+  animation: 0.5s linear infinite alternate;
+}
+
+.logo svg path:nth-child(17) {
+  opacity: 1;
+  animation-name: rotate-1;
+  animation-delay: .1s;
+  transform: rotate(0deg);
+}
+
+@keyframes rotate-0 {
+  from { transform: scale(1); }
+    to { transform: scale(0.95); }
+    from { transform: rotate(0deg); }
+      to { transform: rotate(-1deg) ; }
+
+}
+
+@keyframes rotate-1 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(-30deg); }
+
+}
